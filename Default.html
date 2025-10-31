@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Memory Game</title>
+  <link rel="stylesheet" href="styles.css?v=1.0.0">
+  <script src="script.js?v=1.0.0" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="scroll-text">Custom Memory Game – Play with the default images or upload your own</div>
+  </header>
+
+  <div id="statsBar">
+    <button class="hamburger" id="menuBtn" aria-label="Menu"><span class="line"></span></button>
+    <div id="statsText">Moves: 0 | Misses: 0 | Uploads: 0/10</div>
+    <div class="menu" id="gameMenu">
+      <h4>Menu</h4>
+      <button id="aboutAction">About Me</button>
+      <button id="contactAction">Contact Me</button>
+    </div>
+  </div>
+
+  <main>
+    <div class="grid" id="grid"></div>
+  </main>
+
+  <nav class="bottom-menu">
+    <button id="restartBtn">Restart</button>
+    <button id="uploadBtn">Upload</button>
+    <button id="newBtn">New</button>
+    <input type="file" id="upload" accept="image/*" multiple hidden>
+  </nav>
+
+
+  <!-- Sounds -->
+  <audio id="flipSound" src="flip.mp3"></audio>
+  <audio id="matchSound" src="match.mp3"></audio>
+  <audio id="wrongSound" src="wrong.mp3"></audio>
+  <audio id="winSound" src="win.mp3"></audio>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="closeLightbox">✖</span>
+    <img id="lightbox-img" src="" alt="Zoomed image" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
